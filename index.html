@@ -8,34 +8,42 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://unpkg.com/htmx.org@1.6.1" integrity="sha384-tvG/2mnCFmGQzYC1Oh3qxQ7CkQ9kMzYjWZSNtrRZygHPDDqottzEJsqS4oUVodhW" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
     <section class="contact-clean">
-        <form method="post">
+        <form hx-post="/myform">
             <h2 class="text-center">Numbers</h2>
-            <div class="container">
+            <div class="container" hx-post="/callback">
                 <div class="row">
-                    <div class="col-md-4"><select class="form-select">
-                            <option value="1" selected="">1</option>
+                    <div class="col-md-4">
+                        <select name="pos1" class="form-select">
+                            <option value="1" >1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="0" selected="">&lt;None&gt;</option>
-                        </select></div>
-                    <div class="col-md-4"><select class="form-select">
-                            <option value="1" selected="">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="0" selected="">&lt;None&gt;</option>
-                            <option value=""></option>
-                        </select></div>
-                    <div class="col-md-4"><select class="form-select">
-                            <option value="1" selected="">1</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <select name="pos2" class="form-select">
+                            <option value="1" >1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="0" selected="">&lt;None&gt;</option>
                             <option value=""></option>
-                        </select></div>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <select name="pos3" class="form-select">
+                            <option value="1" >1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="0" selected="">&lt;None&gt;</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
                 </div>
             </div>
             <div class="mb-3"></div>
